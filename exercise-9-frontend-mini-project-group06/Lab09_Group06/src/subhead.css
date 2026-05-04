@@ -1,0 +1,17 @@
+/* Sub header */
+.sub-header {
+  background-color: #2b1a0f;
+  color: white;
+  padding: 20px 40px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+}

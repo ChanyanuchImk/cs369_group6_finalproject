@@ -1,0 +1,248 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Sarabun', sans-serif;
+  background: #FFFDF8;
+  color: #333;
+}
+
+/* ================= HEADER ================= */
+.header {
+  width: 100%;
+  background: #22180A;
+  border-bottom: 8px solid #C8892B;
+  padding: 20px 5%;
+  box-sizing: border-box; /* สำคัญ: เพื่อไม่ให้ padding ดันขอบจอทะลุ */
+}
+
+.enTitle {
+  color: white;
+  margin: 0;
+  font-size: 24px;
+  font-family: 'Jaro', sans-serif;
+}
+
+.header h1 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.back {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* จัด Header ไว้บน Success ไว้ล่าง */
+  background-color: #fdfdfd; /* สีพื้นหลังอ่อนๆ */
+}
+
+/* ================= TITLE ================= */
+.title {
+  font-size: 26px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* ================= LAYOUT ================= */
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* ================= LABEL ================= */
+.label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* ================= UPLOAD BOX ================= */
+.uploadBox {
+  border: 2px solid #C8892B;
+  border-radius: 12px;
+  height: 140px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.uploadBox:hover {
+  background: #fff6ee;
+}
+
+.uploadBox span {
+  color: #C8892B;
+  font-size: 14px;
+}
+
+/* Icon */
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Selfie */
+.selfieSection {
+  margin-top: 20px;
+}
+
+.big {
+  height: 160px;
+}
+
+/* ================= CONSENT ================= */
+.consentTitle {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+.consentBox {
+  border: 2px solid #C8892B;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 13px;
+  background: #fff;
+  color: #C8892B;
+  line-height: 1.6;
+}
+
+/* ================= CHECKBOX ================= */
+.checkbox {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #000;
+}
+
+/* ================= BUTTONS ================= */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.btnOutline {
+  padding: 10px 22px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+.btnPrimary {
+  padding: 10px 22px;
+  background: #C8892B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btnPrimary:hover {
+  background: #b06f22;
+}
+
+.btnPrimary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* ================= SUCCESS PAGE ================= */
+.success {
+  text-align: center;
+  margin-top: 120px;
+  width: 100%;
+  /* เพิ่ม 3 บรรทัดนี้ครับ */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+/* วงกลม */
+.successCircle {
+  width: 110px;
+  height: 110px;
+  border: 3px solid #C8892B;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 25px;
+  background: #fff;
+  animation: pop 0.4s ease;
+}
+
+/* รูปติ๊ก */
+.successCircle img {
+  width: 45px;
+}
+
+/* Title */
+
+.successTitle {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin: 0;           /* ล้าง margin ที่อาจจะแถมมากับ h2 */
+  padding: 10px 0;    /* เพิ่มพื้นที่ให้แถบสีฟ้าดูสวยขึ้น */
+  width: 100%;         /* บังคับให้กว้างเต็มคอนเทนเนอร์ */
+  display: block;      /* มั่นใจว่าเป็น Block element */
+}
+
+.contentSection {
+  width: 100%;
+  max-width: 1000px; /* คุมความกว้างไม่ให้แผ่กว้างเกินไปบนจอคอม */
+  margin: 0 auto;    /* จัดกึ่งกลางหน้าจอ */
+  padding: 40px 24px; /* ✅ เพิ่ม Padding ซ้าย-ขวา 24px เพื่อกันเนื้อหาชนขอบจอ */
+  box-sizing: border-box;
+}
+/* Text */
+.successText {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* animation */
+@keyframes pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

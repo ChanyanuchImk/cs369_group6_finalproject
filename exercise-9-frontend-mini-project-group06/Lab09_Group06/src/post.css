@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #C8892B;
+    --dark-bg: #1a1612;
+    --border-color: #C8892B;
+    --text-gray: #888;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+    background: var(--dark-bg);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    border-bottom: 10px solid #C8892B;
+    font-family: 'Jaro',sans-serif;
+}
+
+.header-section {
+    background-color: #1a1612;
+    width: 100%;
+    padding: 10px 0 30px 0;    
+    color: white;
+    margin-bottom: 2%;
+}
+
+.breadcrumb {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    margin-bottom: 12px;
+    margin-left: 80px;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+    margin-left: 80px;
+}
+
+.page-title .highlight {
+    color: #c88d32;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 50px; /* ปรับลดลงนิดหน่อยให้พอดีหน้าจอ */
+    font-size: large;
+}
+
+.nav-links li {
+    cursor: pointer;
+}
+
+.nav-links li.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.main-image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.badge-cover {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 1;
+}
+/* Card Style */
+.card {
+    background: white;
+    border: 3px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.line {
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+/* Category Tags */
+.category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    padding: 5px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tag:hover, .tag.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Form Inputs */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], 
+input[type="number"], 
+textarea {
+    border: 2px solid #e8d5b5; 
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px; 
+    padding: 10px; 
+    color: #5d4037; 
+    outline: none; 
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #C8892B;
+    box-shadow: 0 0 8px rgba(200, 141, 50, 0.15);
+}
+
+.price-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+/* Buttons */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.btn-primary { background: var(--primary-color); color: white; }
+.btn-secondary { background: white; border: 1px solid var(--primary-color); color: var(--primary-color); }
+.btn-cancel { background: white; color: red; border: 1px solid #ffcccc; }
+
+/* Image Upload Area */
+.image-upload-area {
+    display: flex; 
+    gap: 20px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.main-upload {
+    width: 150px; height: 150px;
+    background: #fff9f0;
+    border: 2px dashed var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.sub-uploads {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.sub-box {
+    width: 60px; height: 60px;
+    border: 2px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    flex-direction: column;
+    color: var(--border-color);
+}
+
+.sub-box-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+}
