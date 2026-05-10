@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap');
+
+/* ===== CONTAINER ===== */
+.homeContainer {
+  font-family: 'Sarabun', sans-serif;
+  min-height: 100vh;
+  background:
+radial-gradient(circle at top left,
+rgba(200,137,43,0.15),
+transparent 35%),
+#120b02;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #22180a;
+  border-bottom: 3px solid #c8892b;
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* ===== PROFILE DROPDOWN ===== */
+.profileWrapper {
+  position: relative;
+}
+
+.profileBtn {
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.profileBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(200, 137, 43, 0.3);
+}
+
+.avatar {
+  color: #22180a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  min-width: 180px;
+  overflow: hidden;
+  animation: dropdownSlide 0.2s ease;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdownItem {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 14px 20px;
+  text-align: left;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #22180a;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdownItem:hover {
+  background: #f5f0e8;
+}
+
+.dropdownItem + .dropdownItem {
+  border-top: 1px solid #e8e0d0;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 60px;
+  max-width: 1200px;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #c8892b;
+  line-height: 1.2;
+  margin: 0 0 48px;
+  letter-spacing: 1px;
+}
+
+.heroTitle .highlight {
+  color: #ffffff;
+}
+
+/* ===== BUTTONS ===== */
+.heroActions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.btnPrimary {
+  background: #c8892b;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 40px;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(200, 137, 43, 0.3);
+}
+
+.btnPrimary:hover {
+  background: #b07520;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 137, 43, 0.4);
+}
+
+.btnPrimary:active {
+  transform: translateY(0);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #c8892b;
+  border: 2px solid #c8892b;
+  border-radius: 10px;
+  padding: 16px 40px;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnSecondary:hover {
+  background: #c8892b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 137, 43, 0.3);
+}
+
+.btnSecondary:active {
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .logoText {
+    font-size: 1.1rem;
+  }
+
+  .profileBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero {
+    padding: 60px 24px;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+}
+
+.heroContent {
+  animation: smoothReveal 1s ease both;
+}
+
+.heroActions {
+  animation: smoothReveal 1s ease both;
+  animation-delay: 0.5s;
+}
+
+@keyframes smoothReveal {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
